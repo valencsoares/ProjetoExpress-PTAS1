@@ -3,6 +3,17 @@
     margin-left: 1%;
 }
 
-.cardIMG {
+.imagemCard {
     max-width: 100%;
+}
+
+.container {
+    display: inline-flex;
+}
+
+.card {
+    border: 1px;
+    max-width: 30%;
+    text-align: center;
+    margin: 4% auto;
 }
