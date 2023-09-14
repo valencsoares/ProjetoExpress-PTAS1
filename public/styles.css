@@ -4,11 +4,14 @@
 }
 
 .imagemCard {
-    max-width: 100%;
+    width: 350px;
+    height: 350px;
+    margin-top: 10px;
 }
 
 .container {
-    display: inline-flex;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 .card {
@@ -16,4 +19,8 @@
     max-width: 30%;
     text-align: center;
     margin: 4% auto;
+}
+
+.textoCard {
+    margin: auto;
 }
