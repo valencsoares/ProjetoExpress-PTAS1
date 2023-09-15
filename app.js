@@ -7,7 +7,7 @@ app.use(express.static('public'));
 
 //a próxima linha é um controller, o "/" é uma rota (a ideia do controle e a rota é a mesma)
 app.get('/', (req, res) => {
-  res.render('index', { message: 'Olá, Mundo!' }); //render: torna visual, como ele joga para o usuário, usa-se a resposta
+  res.render('index'); //render: torna visual, como ele joga para o usuário, usa-se a resposta
 });
 
 app.get('/contatos', (req, res) => {
