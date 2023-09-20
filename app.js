@@ -14,6 +14,10 @@ app.get('/contatos', (req, res) => {
   res.render('contatos', { message: 'Página de contatos!' });
 });
 
+app.get('/produto', (req, res) => {
+  res.render('produto', { message: 'Página do produto!' });
+});
+
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);
 });

@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: "Gill Sans", sans-serif;
 }
 
 nav {
@@ -54,11 +55,44 @@ nav {
 }
 
 .botaoCard {
-    background-color: #ffffff;
+    background-color: #8bddcf;
     border: 1px solid #8bddcf;
-    padding: 1%;
+    color: black;
     border-radius: 4px;
-    cursor: pointer;
-    width: 50%;
-    margin: 2.5% 0 5% 0;
+    text-decoration: none;
+    margin: 0 3% 5% 3%;
+    display: block;
+}
+
+.box {
+    width: 100%;
+    display: flex;
+}
+
+.frase {
+    margin: 5% 7.5% 0 0;
+    max-width: 50%;
+    text-align: right;
+}
+
+.titulo {
+    font-size: 200%;
+    font-weight: 600;
+}
+
+.imgProd {
+    width: 35%;
+    margin: 5% 7% 0 7.50%;
+}
+
+.botaoProduto {
+    text-align: center;
+    background-color: #8bddcf;
+    border: 1px solid #8bddcf;
+    color: black;
+    border-radius: 4px;
+    text-decoration: none;
+    margin: 2% 3% 5% 3%;
+    display: inline-block;
+    width: 30%;
 }
