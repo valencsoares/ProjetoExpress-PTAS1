@@ -5,15 +5,6 @@ const port = 3000;
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
-//a próxima linha é um controller, o "/" é uma rota (a ideia do controle e a rota é a mesma)
-app.get('/', (req, res) => {
-  res.render('index'); //render: torna visual, como ele joga para o usuário, usa-se a resposta
-});
-
-app.get('/contatos', (req, res) => {
-  res.render('contatos', { message: 'Página de contatos!' });
-});
-
 const produtos = [
   {id: 1, nome: "Trono de Vidro - A Lâmina Assassina", preco: "64.90", imagem: "/imagem/tog05.jpg", descricao: "Volume 0.5. Implacável. Sedutora. Letal. A Assassina de Adarlan é tudo isso. Em A lâmina da Assassina: Historias de Trono de Vidro conhecemos Celaena, sua fama ultrapassa os muros de Forte da Fenda, mais brilhante que as torres do castelo de vidro, onde o usurpador governa com mão de ferro o destino de todos em Erilea."},
   {id: 2, nome: "Trono de Vidro", preco: "59.90", imagem: "/imagem/tog1.jpg", descricao: "Volume 1. A magia há muito abandonou Adarlan.  Um perverso rei governa, punindo impiedosamente as minorias rebeldes. Mas tudo pode mudar quando uma assassina é chamada para o castelo. Em Trono de vidro, livro que da início a série bestseller com mais de um milhão de cópias vendidas e legiões de fãs no mundo todo, Celaena tem uma perigosa missão que pode lhe garantir sua tão sonhada liberdade ou ser a sua sentença de morte."},
@@ -26,6 +17,20 @@ const produtos = [
   {id: 9, nome: "Trono de Vidro - Reino de Cinzas", preco: "99.90", imagem: "/imagem/tog6.jpeg", descricao: "Volume 6. Uma princesa que viveria por mil anos. Deveria ser uma dádiva, mas agora é uma maldição. Descubra o aguardado final de Aelin em Reino de Cinzas: a conclusão épica e inesquecível da série Trono de Vidro."},
   {id: 10, nome: "Box Trono de Vidro", preco: "389.90", imagem: "", descricao: "Box com 8 livros da saga Trono de Vidro. O Box Trono de Vidro traz, pela primeira vez, a série fenômeno mundial em um exuberante box rígido e livros com novo projeto gráfico."},
 ]
+
+function buscarProduto(id) {
+  const produto = produtos.find(produto => produto.id == id);
+  return produto || null
+}
+
+//a próxima linha é um controller, o "/" é uma rota (a ideia do controle e a rota é a mesma)
+app.get('/', (req, res) => {
+  res.render('index'); //render: torna visual, como ele joga para o usuário, usa-se a resposta
+});
+
+app.get('/contatos', (req, res) => {
+  res.render('contatos', { message: 'Página de contatos!' });
+});
 
 app.get('/produto', (req, res) => {
   res.render('produto', { message: 'Página do produto!' });
