@@ -1,7 +1,7 @@
 const express = require('express');
 const app = express();
 const port = 3000;
-
+//ejs = interpolar o html e js
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
@@ -25,7 +25,7 @@ function buscarProduto(id) {
 
 //a próxima linha é um controller, o "/" é uma rota (a ideia do controle e a rota é a mesma)
 app.get('/', (req, res) => {
-  res.render('index'); //render: torna visual, como ele joga para o usuário, usa-se a resposta
+  res.render('index', {produtos}); //render: torna visual, como ele joga para o usuário, usa-se a resposta
 });
 
 app.get('/contatos', (req, res) => {
