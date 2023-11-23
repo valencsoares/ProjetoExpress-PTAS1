@@ -39,13 +39,12 @@ nav {
 }
 
 .card {
-    min-width: 10%;
-    max-width: 100%;
+    width: 25%;
     border-radius: 10px;
     text-align: center;
     margin: 10px;
     border: 1px solid #8bddcf;
-    overflow: hidden;
+    overflow: scroll;
 }
 
 .imagemCard {

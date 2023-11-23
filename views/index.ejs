@@ -20,8 +20,8 @@
   <div class="container"> 
   <% for (let produto of produtos){ %>
       <div class="card">
-        <img class="imagemCard" src="/imagens/tog05.jpg" alt="">
-        <p class="textoCard">Trono de Vidro </br> Volume 0.5</p>
+        <img class="imagemCard" src="<%=produto.imagem%>" alt="">
+        <p class="textoCard"> <%=produto.nome%> </br><%= produto.descricao%></p> <!-- sinal de = mostra na tela o js -->
         <div>
           <a class="botaoCard" href="/produto">ver produto</a>
         </div>
