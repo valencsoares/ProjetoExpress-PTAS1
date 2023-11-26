@@ -40,12 +40,17 @@ nav {
 
 .card {
     width: 25%;
-/*     height: 500px; */
+    height: 550px;
     border-radius: 10px;
     text-align: center;
     margin: 10px;
     border: 1px solid #8bddcf;
+}
+
+.desc {
     overflow: scroll;
+    height: 20%;
+    font-size: 90%;
 }
 
 .imagemCard {
@@ -64,7 +69,7 @@ nav {
     color: black;
     border-radius: 4px;
     text-decoration: none;
-    margin: 0 3% 5% 3%;
+    margin: 2% 3% 5% 3%;
     display: block;
 }
 

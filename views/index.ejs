@@ -21,9 +21,12 @@
   <% for (let produto of produtos){ %>
       <div class="card">
         <img class="imagemCard" src="<%=produto.imagem%>" alt="">
-        <p class="textoCard"> <%=produto.nome%> </br><%= produto.descricao%></p> <!-- sinal de = mostra na tela o js -->
+        <h4 class="textoCard"> <%=produto.nome%> </h4>
+        <div class="desc">
+          <p><%= produto.descricao%></p> <!-- sinal de = mostra na tela o js -->
+        </div>  
         <div>
-          <a class="botaoCard" href="/produto">ver produto</a>
+          <a class="botaoCard" href="/produto">R$<%=produto.preco%></a>
         </div>
       </div>
   <% } %>  
