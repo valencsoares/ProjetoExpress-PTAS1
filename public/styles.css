@@ -7,7 +7,11 @@ nav {
     background-color: #8bddcf; 
     display: block;
     max-height: 100px;
+    width: 100%;
     border-bottom: 1px solid #63c6b5;
+    position: fixed;
+    z-index: 1;
+    top: 0;
 }
 
 .grid {
@@ -36,6 +40,7 @@ nav {
     flex-wrap: wrap;
     justify-content: center;
     align-items: flex-start;
+    margin-top: 7%;
 }
 
 .card {
@@ -74,6 +79,7 @@ nav {
 }
 
 .box {
+    margin-top: 7%;
     width: 100%;
     display: flex;
 }
