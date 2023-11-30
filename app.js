@@ -32,8 +32,9 @@ app.get('/contatos', (req, res) => {
   res.render('contatos', { message: 'Página de contatos!' });
 });
 
-app.get('/produto', (req, res) => {
-  res.render('produto', { message: 'Página do produto!' });
+app.get('/produto/:id', (req, res) => { /* quando é barra alguma coisa é params, quando é "?id:1" (tem interrogação) ai usa carry */
+  const produto = buscarProduto(req.params.id)
+  res.render('produto', { produto });
 });
 
 app.listen(port, () => {

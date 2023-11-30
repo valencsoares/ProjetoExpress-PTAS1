@@ -18,6 +18,19 @@
         </header>
 
         <div class="box">
+          <img src="<%=produto.imagem%>" class="imgProd"></img>
+        <div class="frase">
+          <p class="titulo"><%=produto.nome%></p>
+          <div>
+              <p>por <%=produto.autor%></p>
+              <p style="font-size: 90%;"><%= produto.descricao%></p>
+              <p style="margin: 7% 13% 0 0; font-size: 110%; font-weight: 600;">R$<%=produto.preco%></p>
+              <a class="botaoProduto" href="">comprar</a>
+          </div>
+        </div>
+      </div>
+
+        <!-- <div class="box">
             <img src="/imagem/tog3.jpeg" class="imgProd"></img>
           <div class="frase">
             <p class="titulo">Trono de Vidro: Herdeira do fogo (Vol. 3)</p>
@@ -28,7 +41,7 @@
                 <a class="botaoProduto" href="">comprar</a>
             </div>
           </div>
-        </div>
+        </div> -->
 
     </body>
 </html>
